@@ -1,0 +1,148 @@
+{
+  "info": {
+    "_postman_id": "6e8ba8e3-32af-49b6-a653-064c5f8e762c",
+    "name": "Hackaton-Vacinas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46853938",
+    "_collection_link": "https://go.postman.co/collection/46853938-6e8ba8e3-32af-49b6-a653-064c5f8e762c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Criar Vacina",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"nome\": \"Dupla adulto (dT)\",\r\n    \"descricao\": \"Na adolescência, completar o esquema de três doses conforme o histórico e manter os reforços indicados. Protege contra difteria e tétano.\",\r\n    \"idadeAlvoEmMeses\": 168\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/vacinas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vacinas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar Vacinas",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/vacinas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vacinas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Lista Vacina por ID",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/vacinas/36d13647-9b98-4715-94d3-0b89166ee407",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vacinas",
+            "36d13647-9b98-4715-94d3-0b89166ee407"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Atualiza Vacina",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nome\": \"BCG\",\r\n  \"descricao\": \"Dose única logo ao nascer\",\r\n  \"idadeAlvoEmMeses\": 0\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/vacinas/36d13647-9b98-4715-94d3-0b89166ee407",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vacinas",
+            "36d13647-9b98-4715-94d3-0b89166ee407"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Exclui Vacina",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/vacinas/36d13647-9b98-4715-94d3-0b89166ee407",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "vacinas",
+            "36d13647-9b98-4715-94d3-0b89166ee407"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
