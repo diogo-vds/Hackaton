@@ -1,0 +1,34 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: ms-prontuario
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/prontuario}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASS:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${JWT_ISSUER:https://auth.saude.local}
+
+aws:
+  region: sa-east-1
+  sqs:
+    lembrete-vacina-url: ${SQS_LEMBRETE_VACINA:https://sqs.sa-east-1.amazonaws.com/123/lembrete-vacina-queue}
+    lembrete-consulta-url: ${SQS_LEMBRETE_CONSULTA:https://sqs.sa-east-1.amazonaws.com/123/lembrete-consulta-queue}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
