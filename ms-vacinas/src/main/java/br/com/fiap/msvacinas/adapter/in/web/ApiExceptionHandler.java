@@ -1,6 +1,7 @@
 package br.com.fiap.msvacinas.adapter.in.web;
 
 import br.com.fiap.msvacinas.domain.exception.VacinaNaoEncontradaException;
+import br.com.fiap.msvacinas.domain.exception.NumeroSusInvalidoException;
 import java.net.URI;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
@@ -10,6 +11,14 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
 public class ApiExceptionHandler {
+    @ExceptionHandler(NumeroSusInvalidoException.class)
+    ProblemDetail numeroSusInvalido(NumeroSusInvalidoException exception) {
+        var problem = ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST, exception.getMessage());
+        problem.setTitle("Número SUS inválido");
+        problem.setType(URI.create("urn:problema:numero-sus-invalido"));
+        return problem;
+    }
+
     @ExceptionHandler(VacinaNaoEncontradaException.class)
     ProblemDetail naoEncontrada(VacinaNaoEncontradaException exception) {
         var problem = ProblemDetail.forStatusAndDetail(HttpStatus.NOT_FOUND, exception.getMessage());
