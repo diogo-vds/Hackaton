@@ -1,0 +1,10 @@
+{
+  "Records": [
+    {
+      "messageId": "11111111-1111-1111-1111-111111111111",
+      "body": "{\"numero_sus\":\"123456789012345\",\"consentimento\":true}",
+      "eventSource": "aws:sqs",
+      "awsRegion": "us-east-1"
+    }
+  ]
+}

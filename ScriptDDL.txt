@@ -1,0 +1,161 @@
+-- ============================================================
+-- BANCO DE DADOS - SISTEMA DE CONTROLE DE VACINAÇÃO
+-- PostgreSQL
+-- ============================================================
+
+
+-- ============================================================
+-- 1. PESSOA
+-- ============================================================
+
+CREATE TABLE pessoa (
+    numero_sus                  BIGSERIAL PRIMARY KEY,
+    consentimento       boolean NOT NULL
+);
+
+
+-- ============================================================
+-- 2. VACINA
+-- ============================================================
+
+CREATE TABLE vacina (
+    id                  BIGSERIAL PRIMARY KEY,
+    nome                VARCHAR(150) NOT NULL,
+    sigla               VARCHAR(20),
+    fabricante          VARCHAR(150),
+
+    CONSTRAINT uk_vacina_nome UNIQUE (nome)
+);
+
+
+-- ============================================================
+-- 5. CALENDÁRIO VACINAL
+-- ============================================================
+
+CREATE TABLE calendario_vacinal (
+    id                      BIGSERIAL PRIMARY KEY,
+    nome                    VARCHAR(150) NOT NULL,
+    versao                  VARCHAR(20) NOT NULL,
+    data_inicio_vigencia    DATE NOT NULL,
+    data_fim_vigencia       DATE,
+
+    CONSTRAINT ck_calendario_vigencia
+        CHECK (
+            data_fim_vigencia IS NULL
+            OR data_fim_vigencia >= data_inicio_vigencia
+        ),
+
+    CONSTRAINT uk_calendario_versao
+        UNIQUE (nome, versao)
+);
+
+
+-- ============================================================
+-- 6. ESQUEMA DE VACINAÇÃO
+-- ============================================================
+
+CREATE TABLE esquema_vacinacao (
+    id                          BIGSERIAL PRIMARY KEY,
+
+    calendario_vacinal_id      BIGINT NOT NULL,
+    vacina_id                  BIGINT NOT NULL,
+
+    numero_dose                INTEGER NOT NULL,
+    tipo_dose                  VARCHAR(50) NOT NULL,
+
+    idade_minima_valor         INTEGER,
+    idade_minima_unidade       VARCHAR(20),
+
+    idade_recomendada_valor    INTEGER,
+    idade_recomendada_unidade  VARCHAR(20),
+
+    idade_maxima_valor         INTEGER,
+    idade_maxima_unidade       VARCHAR(20),
+
+    intervalo_minimo_valor     INTEGER,
+    intervalo_minimo_unidade   VARCHAR(20),
+
+    CONSTRAINT fk_esquema_calendario
+        FOREIGN KEY (calendario_vacinal_id)
+        REFERENCES calendario_vacinal (id),
+
+    CONSTRAINT fk_esquema_vacina
+        FOREIGN KEY (vacina_id)
+        REFERENCES vacina (id),
+
+    CONSTRAINT ck_esquema_numero_dose
+        CHECK (numero_dose > 0),
+
+    CONSTRAINT ck_idade_minima
+        CHECK (
+            idade_minima_valor IS NULL
+            OR idade_minima_valor >= 0
+        ),
+
+    CONSTRAINT ck_idade_recomendada
+        CHECK (
+            idade_recomendada_valor IS NULL
+            OR idade_recomendada_valor >= 0
+        ),
+
+    CONSTRAINT ck_idade_maxima
+        CHECK (
+            idade_maxima_valor IS NULL
+            OR idade_maxima_valor >= 0
+        ),
+
+    CONSTRAINT ck_intervalo_minimo
+        CHECK (
+            intervalo_minimo_valor IS NULL
+            OR intervalo_minimo_valor >= 0
+        )
+);
+
+
+
+-- ============================================================
+-- 8. APLICAÇÃO DE VACINA
+-- ============================================================
+
+CREATE TABLE aplicacao_vacina (
+    id                      BIGSERIAL PRIMARY KEY,
+
+    numero_sus              BIGINT NOT NULL,
+    esquema_vacinacao_id    BIGINT NOT NULL,
+
+    data_aplicacao          TIMESTAMP NOT NULL,
+    lote                    VARCHAR(50) NOT NULL,
+
+    agente_saude_id         BIGINT NOT NULL,
+    observacao              VARCHAR(500),
+
+    unidade_atendimento_id  BIGINT NOT NULL,
+
+    CONSTRAINT fk_aplicacao_pessoa
+        FOREIGN KEY (numero_sus)
+        REFERENCES pessoa (numero_sus),
+
+    CONSTRAINT fk_aplicacao_esquema
+        FOREIGN KEY (esquema_vacinacao_id)
+        REFERENCES esquema_vacinacao (id),
+
+);
+
+
+-- ============================================================
+-- ÍNDICES
+-- ============================================================
+CREATE INDEX idx_aplicacao_pessoa
+    ON aplicacao_vacina (pessoa_id);
+
+CREATE INDEX idx_aplicacao_esquema
+    ON aplicacao_vacina (esquema_vacinacao_id);
+
+CREATE INDEX idx_aplicacao_data
+    ON aplicacao_vacina (data_aplicacao);
+
+CREATE INDEX idx_esquema_calendario
+    ON esquema_vacinacao (calendario_vacinal_id);
+
+CREATE INDEX idx_esquema_vacina
+    ON esquema_vacinacao (vacina_id);
