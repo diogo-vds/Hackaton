@@ -21,7 +21,7 @@ class CadernetaControllerTest {
 
     @Test
     void deveConsultarCaderneta() throws Exception {
-        var numeroSus = "123456789012345";
+        var numeroSus = "123456789012";
         when(useCase.consultar(numeroSus)).thenReturn(new CadernetaVacinal(
                 numeroSus,
                 "CONSULTA_SIMULADA",

@@ -136,7 +136,6 @@ VALUES
     6, 'SEMANAS',
     2, 'MESES',
     6, 'ANOS',
-    NULL, NULL,
     NULL, NULL
 ),
 (

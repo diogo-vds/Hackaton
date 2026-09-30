@@ -143,6 +143,37 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Consultar Caderneta SUS",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/caderneta?numero_sus=100000000001",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "caderneta"
+          ],
+          "query": [
+            {
+              "key": "numero_sus",
+              "value": "100000000001"
+            }
+          ]
+        },
+        "description": "Consulta a caderneta criada por 04_dados_teste_caderneta.sql."
+      },
+      "response": []
     }
   ]
 }

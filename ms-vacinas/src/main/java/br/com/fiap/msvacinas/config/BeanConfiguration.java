@@ -10,6 +10,7 @@ import br.com.fiap.msvacinas.application.service.CadernetaService;
 import br.com.fiap.msvacinas.application.service.VacinaService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 @Configuration
 public class BeanConfiguration {
@@ -24,7 +25,7 @@ public class BeanConfiguration {
     }
 
     @Bean
-    public ConsultarCadernetaUseCase consultarCadernetaUseCase() {
-        return new CadernetaService();
+    public ConsultarCadernetaUseCase consultarCadernetaUseCase(JdbcTemplate jdbcTemplate) {
+        return new CadernetaService(jdbcTemplate);
     }
 }

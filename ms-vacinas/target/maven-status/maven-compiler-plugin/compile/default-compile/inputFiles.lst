@@ -1,24 +1,30 @@
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\in\web\ApiExceptionHandler.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\in\web\ConsentimentoController.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\in\web\ConsentimentoRequest.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\in\web\ConsentimentoResponse.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\in\web\VacinaController.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\in\web\VacinaRequest.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\in\web\VacinaResponse.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\out\persistence\ConsentimentoJpaEntity.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\out\persistence\ConsentimentoPersistenceAdapter.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\out\persistence\SpringDataConsentimentoRepository.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\out\persistence\SpringDataVacinaRepository.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\out\persistence\VacinaJpaEntity.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\out\persistence\VacinaPersistenceAdapter.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\application\port\in\SalvarConsentimentoUseCase.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\application\port\in\VacinaUseCase.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\application\port\out\ConsentimentoPersistencePort.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\application\port\out\VacinaRepositoryPort.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\application\service\ConsentimentoService.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\application\service\VacinaService.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\config\BeanConfiguration.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\domain\exception\VacinaNaoEncontradaException.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\domain\model\ConsentimentoNotificacao.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\domain\model\Vacina.java
-C:\Users\blend\Documents\Repositorios\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\MsVacinasApplication.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\in\web\ApiExceptionHandler.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\in\web\CadernetaController.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\in\web\CadernetaResponse.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\in\web\ConsentimentoController.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\in\web\ConsentimentoRequest.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\in\web\ConsentimentoResponse.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\in\web\VacinaController.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\in\web\VacinaRequest.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\in\web\VacinaResponse.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\out\persistence\ConsentimentoJpaEntity.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\out\persistence\ConsentimentoPersistenceAdapter.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\out\persistence\SpringDataConsentimentoRepository.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\out\persistence\SpringDataVacinaRepository.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\out\persistence\VacinaJpaEntity.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\adapter\out\persistence\VacinaPersistenceAdapter.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\application\port\in\ConsultarCadernetaUseCase.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\application\port\in\SalvarConsentimentoUseCase.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\application\port\in\VacinaUseCase.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\application\port\out\ConsentimentoPersistencePort.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\application\port\out\VacinaRepositoryPort.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\application\service\CadernetaService.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\application\service\ConsentimentoService.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\application\service\VacinaService.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\config\BeanConfiguration.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\domain\exception\NumeroSusInvalidoException.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\domain\exception\VacinaNaoEncontradaException.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\domain\model\CadernetaVacinal.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\domain\model\ConsentimentoNotificacao.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\domain\model\Vacina.java
+C:\Projetos\Pós ADJT\TechChallenge\Modulo 5\Hackaton\Hackaton\ms-vacinas\src\main\java\br\com\fiap\msvacinas\MsVacinasApplication.java
