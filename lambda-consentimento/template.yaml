@@ -1,0 +1,80 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Lambda que consome consentimentos da SQS e persiste no PostgreSQL.
+
+Parameters:
+  DatabaseHost:
+    Type: String
+  DatabasePort:
+    Type: Number
+    Default: 5432
+  DatabaseName:
+    Type: String
+  DatabaseSecretArn:
+    Type: String
+    Description: ARN do segredo com as propriedades username e password.
+  VpcSubnetIds:
+    Type: List<AWS::EC2::Subnet::Id>
+  VpcSecurityGroupIds:
+    Type: List<AWS::EC2::SecurityGroup::Id>
+
+Resources:
+  ConsentimentoDeadLetterQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      MessageRetentionPeriod: 1209600
+      SqsManagedSseEnabled: true
+
+  ConsentimentoQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      VisibilityTimeout: 180
+      SqsManagedSseEnabled: true
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt ConsentimentoDeadLetterQueue.Arn
+        maxReceiveCount: 3
+
+  ConsentimentoFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: salvar-consentimento
+      CodeUri: src/
+      Handler: app.lambda_handler
+      Runtime: python3.14
+      Architectures:
+        - arm64
+      MemorySize: 256
+      Timeout: 30
+      Environment:
+        Variables:
+          DB_HOST: !Ref DatabaseHost
+          DB_PORT: !Ref DatabasePort
+          DB_NAME: !Ref DatabaseName
+          DB_SECRET_ARN: !Ref DatabaseSecretArn
+      VpcConfig:
+        SubnetIds: !Ref VpcSubnetIds
+        SecurityGroupIds: !Ref VpcSecurityGroupIds
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - AWSLambdaVPCAccessExecutionRole
+        - Statement:
+            - Effect: Allow
+              Action: secretsmanager:GetSecretValue
+              Resource: !Ref DatabaseSecretArn
+      Events:
+        ConsentimentoSqsEvent:
+          Type: SQS
+          Properties:
+            Queue: !GetAtt ConsentimentoQueue.Arn
+            BatchSize: 10
+            MaximumBatchingWindowInSeconds: 5
+            FunctionResponseTypes:
+              - ReportBatchItemFailures
+
+Outputs:
+  ConsentimentoQueueUrl:
+    Value: !Ref ConsentimentoQueue
+  ConsentimentoQueueArn:
+    Value: !GetAtt ConsentimentoQueue.Arn
+  ConsentimentoDeadLetterQueueUrl:
+    Value: !Ref ConsentimentoDeadLetterQueue

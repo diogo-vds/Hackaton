@@ -1,0 +1,92 @@
+[
+  {
+    "nome": "BCG",
+    "descricao": "Dose única ao nascer. Protege contra as formas graves e disseminadas da tuberculose e oferece proteção contra a hanseníase.",
+    "idadeAlvoEmMeses": 0
+  },
+  {
+    "nome": "Hepatite B",
+    "descricao": "Primeira dose ao nascer. O esquema é continuado com a vacina pentavalente aos 2, 4 e 6 meses. Adolescentes sem comprovação devem completar três doses.",
+    "idadeAlvoEmMeses": 0
+  },
+  {
+    "nome": "Pentavalente (DTP + Hib + HB)",
+    "descricao": "Esquema de três doses aos 2, 4 e 6 meses. Protege contra difteria, tétano, coqueluche, Haemophilus influenzae tipo b e hepatite B.",
+    "idadeAlvoEmMeses": 2
+  },
+  {
+    "nome": "Poliomielite inativada (VIP)",
+    "descricao": "Doses aos 2, 4 e 6 meses, com reforços aos 15 meses e 4 anos. Protege contra a poliomielite.",
+    "idadeAlvoEmMeses": 2
+  },
+  {
+    "nome": "Rotavírus humano",
+    "descricao": "Duas doses aos 2 e 4 meses, respeitando os limites de idade definidos pelo calendário. Protege contra gastroenterite causada pelo rotavírus.",
+    "idadeAlvoEmMeses": 2
+  },
+  {
+    "nome": "Pneumocócica conjugada",
+    "descricao": "Doses aos 2 e 4 meses, com reforço aos 12 meses. Protege contra doenças pneumocócicas invasivas.",
+    "idadeAlvoEmMeses": 2
+  },
+  {
+    "nome": "Meningocócica C",
+    "descricao": "Duas doses aos 3 e 5 meses. Protege contra doenças meningocócicas causadas pelo sorogrupo C.",
+    "idadeAlvoEmMeses": 3
+  },
+  {
+    "nome": "Covid-19",
+    "descricao": "Esquema iniciado aos 6 meses, com doses subsequentes conforme o imunizante e a situação vacinal. Protege principalmente contra formas graves de covid-19.",
+    "idadeAlvoEmMeses": 6
+  },
+  {
+    "nome": "Influenza",
+    "descricao": "Vacinação anual a partir dos 6 meses para os grupos contemplados pelo calendário. Na primeira vacinação infantil podem ser necessárias duas doses.",
+    "idadeAlvoEmMeses": 6
+  },
+  {
+    "nome": "Febre amarela",
+    "descricao": "Primeira dose de rotina aos 9 meses e reforço aos 4 anos. Pode ser antecipada para 6 a 8 meses em situações excepcionais de risco epidemiológico.",
+    "idadeAlvoEmMeses": 9
+  },
+  {
+    "nome": "Meningocócica ACWY",
+    "descricao": "Dose aos 12 meses e dose na adolescência, entre 11 e 14 anos, conforme o histórico vacinal. Protege contra os sorogrupos A, C, W e Y.",
+    "idadeAlvoEmMeses": 12
+  },
+  {
+    "nome": "Tríplice viral (SCR)",
+    "descricao": "Doses aos 12 e 15 meses. Adolescentes sem comprovação devem completar duas doses. Protege contra sarampo, caxumba e rubéola.",
+    "idadeAlvoEmMeses": 12
+  },
+  {
+    "nome": "DTP",
+    "descricao": "Reforços aos 15 meses e 4 anos após o esquema primário com pentavalente. Protege contra difteria, tétano e coqueluche.",
+    "idadeAlvoEmMeses": 15
+  },
+  {
+    "nome": "Varicela",
+    "descricao": "Doses aos 15 meses e 4 anos. Na adolescência possui indicações específicas conforme histórico vacinal, doença prévia e grupo populacional.",
+    "idadeAlvoEmMeses": 15
+  },
+  {
+    "nome": "Hepatite A",
+    "descricao": "Dose única aos 15 meses. Protege contra a hepatite A.",
+    "idadeAlvoEmMeses": 15
+  },
+  {
+    "nome": "HPV quadrivalente (HPV4)",
+    "descricao": "Dose única dos 9 aos 14 anos. Pessoas não vacinadas de 15 a 19 anos devem seguir a estratégia vigente no estado.",
+    "idadeAlvoEmMeses": 108
+  },
+  {
+    "nome": "Dengue tetravalente (DNG4)",
+    "descricao": "Esquema de duas doses dos 10 aos 14 anos. Protege contra os quatro sorotipos do vírus da dengue.",
+    "idadeAlvoEmMeses": 120
+  },
+  {
+    "nome": "Dupla adulto (dT)",
+    "descricao": "Na adolescência, completar o esquema de três doses conforme o histórico e manter os reforços indicados. Protege contra difteria e tétano.",
+    "idadeAlvoEmMeses": 168
+  }
+]

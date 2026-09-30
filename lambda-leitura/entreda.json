@@ -1,0 +1,10 @@
+{
+  "cpf": "12345678900",
+  "nome": "Maria da Silva",
+  "vacina": "COVID-19",
+  "dose": "1ª",
+  "lote": "ABC123",
+  "dataAplicacao": "2025-01-15",
+  "unidadeSaude": "UBS Centro",
+  "calendarioVacinalId": "550e8400-e29b-41d4-a716-446655440000"
+}
